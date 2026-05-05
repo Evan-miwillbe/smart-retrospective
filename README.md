@@ -217,6 +217,36 @@ AI 会自动完成：
 
 ---
 
+## 这不是一个假想需求
+
+我们在 Reddit、Hacker News、知乎、V2EX 等平台搜集了大量真实用户反馈，验证了这个痛点的普遍性：
+
+### 数据说话
+
+| 数据 | 来源 |
+|------|------|
+| **73%** 的会议 action items 永远不会被完成 | PMI 社区调研 |
+| **45%** 的开发者每周 3 次以上因知识孤岛受阻 | StackOverflow 2024 开发者调查 |
+| **80%** 的企业复盘会是无效劳动 | 知乎专栏（1.6万阅读） |
+| **38%** 的会议决策在执行前蒸发 | 飞书妙记内部数据（使用前执行率仅62%） |
+| **90%** 的中国企业受困于信息孤岛 | 知乎行业分析 |
+| 企业每年因知识孤岛损失 **$47M** | CIO Dive 行业报告 |
+| 某团队同一问题**连续 5 次复盘提出，零改变** | GoRetro 开发者社区 |
+
+### 真实用户怎么说
+
+> "80%的复盘会都是无效劳动，不是**邀功仪式**就是**甩锅大会**。" — 知乎
+
+> "没有结果的会议是白开，**没有跟踪的会议是多开**。" — 知乎
+
+> "IM工具和会议都不是好的协同工具，因为**无法把信息做到真正的结构化**。" — 左耳朵耗子（CoolShell）
+
+> "I've repeated the same retrospective items sprint over sprint without them being addressed." — Hacker News
+
+> "Post-mortem lessons end up in a document that sits in some knowledge repo and **is hardly ever read**." — Scrum Alliance
+
+---
+
 ## 路线图
 
 - [x] v1.0: 4 Phase + 7 Pattern + Multi-Agent 采集
@@ -237,3 +267,33 @@ MIT
 本项目参加 [飞书 CLI 创作者大赛](https://bytedance.larkoffice.com/docx/HWgKdWfeSoDw36xu7EYctBrUnsg)，感谢飞书团队和 Way to AGI 社区。
 
 Built with [Claude Code](https://claude.ai/claude-code) + [飞书 CLI](https://github.com/nicepkg/feishu-cli)
+
+---
+
+## 参考资料与来源
+
+### 行业研究
+- [PMI: 73% of meeting action items go unfinished](https://www.projectmanagement.com/) — PMI Community Survey
+- [StackOverflow 2024 Developer Survey: Knowledge Silos](https://survey.stackoverflow.co/2024/) — 45% of devs impacted 3+ times/week
+- [CIO Dive: Companies lose $47M/year to poor knowledge sharing](https://www.ciodive.com/)
+- [Ponemon Institute: Average unplanned outage costs $9,000/minute](https://www.ponemon.org/)
+- [PagerDuty 2024: Customer-impacting incidents up 43% YoY](https://www.pagerduty.com/)
+
+### 中文平台讨论
+- [知乎：80%公司都不会复盘，如何开好一场复盘会？](https://zhuanlan.zhihu.com/p/629720809)
+- [知乎：你的项目复盘会，为什么开不好？](https://zhuanlan.zhihu.com/p/1976973852446844258)
+- [知乎：为什么我们的会议开得多却没产出](https://zhuanlan.zhihu.com/p/1961170631522521882)
+- [知乎：90%的中国企业受困于信息孤岛](https://zhuanlan.zhihu.com/p/166543943)
+- [知乎：跨部门协同的五个障碍](https://zhuanlan.zhihu.com/p/375152039)
+- [V2EX：连续加班一个多月后的反思（159回复）](https://www.v2ex.com/t/927862)
+- [V2EX：每天早会制度讨论（43回复）](https://hk.v2ex.com/t/980106)
+- [V2EX：求推荐公司用的知识库系统（73回复）](https://v2ex.com/t/914777)
+- [CoolShell：聊聊团队协同和协同工具](https://coolshell.cn/articles/22298.html) — 左耳朵耗子
+- [CSDN：企业知识库的三大痛点](https://blog.csdn.net/yufeishuju/article/details/150587846)
+
+### 英文社区讨论
+- [Hacker News: Retrospectives as box-ticking exercises](https://news.ycombinator.com/item?id=28352828)
+- [Hacker News: Why aren't retrospectives a thing in traditional industries?](https://news.ycombinator.com/item?id=17063246)
+- [GoRetro: Same issue raised 5 retros in a row with zero change](https://www.goretro.ai/)
+- [Scrum Alliance: Why post-mortems fail](https://www.scrumalliance.org/)
+- [Easy Agile: Retro action item completion rate 40-50%](https://www.easyagile.com/)
