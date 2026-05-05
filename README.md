@@ -109,7 +109,7 @@
 ```bash
 # 克隆到 Claude Code skills 目录
 cd ~/.claude/skills
-git clone https://github.com/nicepkg/smart-retrospective.git
+git clone https://github.com/Evan-miwillbe/smart-retrospective.git
 
 # 或手动下载 SKILL.md 到 ~/.claude/skills/smart-retrospective/
 ```
