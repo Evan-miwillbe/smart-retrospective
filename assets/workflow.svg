@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="phase0" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="phase1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="phase2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="phase3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="phase4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Smart Retrospective — 4 Phase Workflow</text>
+
+  <!-- Phase 0 -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="62" width="780" height="68" rx="10" fill="url(#phase0)"/>
+  </g>
+  <text x="90" y="90" font-size="13" font-weight="700" fill="#e0e7ff">PHASE 0</text>
+  <text x="165" y="90" font-size="14" font-weight="600" fill="#fff">范围确认</text>
+  <text x="90" y="114" font-size="12.5" fill="#e0e7ff">用户提供：群 ID / 时间范围 / 输出路径 / 分析深度（quick · standard · deep）</text>
+
+  <!-- Arrow -->
+  <path d="M450 130 L450 152" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 1 -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="155" width="780" height="82" rx="10" fill="url(#phase1)"/>
+  </g>
+  <text x="90" y="184" font-size="13" font-weight="700" fill="#bfdbfe">PHASE 1</text>
+  <text x="165" y="184" font-size="14" font-weight="600" fill="#fff">并行采集（5 Agent 同时工作）</text>
+  <!-- 5 agent pills -->
+  <rect x="90" y="198" width="120" height="28" rx="14" fill="rgba(255,255,255,0.18)"/>
+  <text x="150" y="217" text-anchor="middle" font-size="11.5" fill="#fff">IM-Collector</text>
+  <rect x="224" y="198" width="120" height="28" rx="14" fill="rgba(255,255,255,0.18)"/>
+  <text x="284" y="217" text-anchor="middle" font-size="11.5" fill="#fff">Min-Collector</text>
+  <rect x="358" y="198" width="120" height="28" rx="14" fill="rgba(255,255,255,0.18)"/>
+  <text x="418" y="217" text-anchor="middle" font-size="11.5" fill="#fff">Task-Collector</text>
+  <rect x="492" y="198" width="120" height="28" rx="14" fill="rgba(255,255,255,0.18)"/>
+  <text x="552" y="217" text-anchor="middle" font-size="11.5" fill="#fff">Doc-Collector</text>
+  <rect x="626" y="198" width="120" height="28" rx="14" fill="rgba(255,255,255,0.18)"/>
+  <text x="686" y="217" text-anchor="middle" font-size="11.5" fill="#fff">Cal-Collector</text>
+
+  <!-- Arrow -->
+  <path d="M450 237 L450 259" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 2 -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="262" width="780" height="68" rx="10" fill="url(#phase2)"/>
+  </g>
+  <text x="90" y="290" font-size="13" font-weight="700" fill="#cffafe">PHASE 2</text>
+  <text x="165" y="290" font-size="14" font-weight="600" fill="#fff">指标引擎（四维计算）</text>
+  <!-- 4 metric pills -->
+  <rect x="90" y="302" width="100" height="22" rx="11" fill="rgba(255,255,255,0.18)"/>
+  <text x="140" y="317" text-anchor="middle" font-size="11" fill="#fff">沟通指标</text>
+  <rect x="204" y="302" width="100" height="22" rx="11" fill="rgba(255,255,255,0.18)"/>
+  <text x="254" y="317" text-anchor="middle" font-size="11" fill="#fff">执行指标</text>
+  <rect x="318" y="302" width="100" height="22" rx="11" fill="rgba(255,255,255,0.18)"/>
+  <text x="368" y="317" text-anchor="middle" font-size="11" fill="#fff">会议指标</text>
+  <rect x="432" y="302" width="100" height="22" rx="11" fill="rgba(255,255,255,0.18)"/>
+  <text x="482" y="317" text-anchor="middle" font-size="11" fill="#fff">知识指标</text>
+
+  <!-- Arrow -->
+  <path d="M450 330 L450 352" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 3 (highlighted) -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="355" width="780" height="68" rx="10" fill="url(#phase3)"/>
+    <rect x="60" y="355" width="780" height="68" rx="10" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6,3"/>
+  </g>
+  <text x="90" y="383" font-size="13" font-weight="700" fill="#fef3c7">PHASE 3</text>
+  <text x="165" y="383" font-size="14" font-weight="600" fill="#fff">模式检测（核心创新）</text>
+  <rect x="780" y="362" width="48" height="20" rx="10" fill="#fef3c7"/>
+  <text x="804" y="376" text-anchor="middle" font-size="10" font-weight="700" fill="#92400e">CORE</text>
+  <text x="90" y="407" font-size="12.5" fill="#fef3c7">7 种跨源模式 × 双源交叉验证 × 证据链构建 × 优先级排序</text>
+
+  <!-- Arrow -->
+  <path d="M450 423 L450 445" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 4 -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="448" width="780" height="62" rx="10" fill="url(#phase4)"/>
+  </g>
+  <text x="90" y="476" font-size="13" font-weight="700" fill="#d1fae5">PHASE 4</text>
+  <text x="165" y="476" font-size="14" font-weight="600" fill="#fff">报告生成</text>
+  <!-- 3 output pills -->
+  <rect x="90" y="486" width="130" height="18" rx="9" fill="rgba(255,255,255,0.18)"/>
+  <text x="155" y="499" text-anchor="middle" font-size="10.5" fill="#fff">飞书文档（金字塔报告）</text>
+  <rect x="234" y="486" width="140" height="18" rx="9" fill="rgba(255,255,255,0.18)"/>
+  <text x="304" y="499" text-anchor="middle" font-size="10.5" fill="#fff">飞书白板（时间线可视化）</text>
+  <rect x="388" y="486" width="140" height="18" rx="9" fill="rgba(255,255,255,0.18)"/>
+  <text x="458" y="499" text-anchor="middle" font-size="10.5" fill="#fff">飞书多维表（指标数据）</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

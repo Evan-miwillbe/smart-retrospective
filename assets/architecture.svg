@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="grad-main" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="grad-agent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="grad-metric" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="grad-pattern" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="grad-output" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="s">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="700" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Smart Retrospective — Multi-Agent Architecture</text>
+
+  <!-- ============ Main CC ============ -->
+  <g filter="url(#s)">
+    <rect x="300" y="56" width="300" height="60" rx="12" fill="url(#grad-main)"/>
+  </g>
+  <text x="450" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">主 CC（调度者）</text>
+  <text x="450" y="102" text-anchor="middle" font-size="11.5" fill="#c7d2fe">范围确认 → Agent派发 → 指标合成 → 报告生成</text>
+
+  <!-- Phase 1 label -->
+  <rect x="30" y="142" width="100" height="24" rx="12" fill="#dbeafe"/>
+  <text x="80" y="158" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">Phase 1</text>
+  <text x="140" y="158" font-size="11.5" fill="#64748b">并行采集</text>
+
+  <!-- Connector lines from Main CC to 5 agents -->
+  <line x1="450" y1="116" x2="450" y2="135" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Fan out -->
+  <path d="M450 135 L100 175" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-blue)"/>
+  <path d="M450 135 L275 175" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-blue)"/>
+  <path d="M450 135 L450 175" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-blue)"/>
+  <path d="M450 135 L625 175" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-blue)"/>
+  <path d="M450 135 L800 175" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-blue)"/>
+
+  <!-- ============ 5 Collector Agents ============ -->
+  <!-- IM -->
+  <g filter="url(#s)">
+    <rect x="30" y="178" width="140" height="90" rx="10" fill="url(#grad-agent)"/>
+  </g>
+  <text x="100" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">IM-Collector</text>
+  <text x="100" y="220" text-anchor="middle" font-size="10.5" fill="#bfdbfe">群消息采集</text>
+  <line x1="50" y1="230" x2="150" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="100" y="246" text-anchor="middle" font-size="9.5" fill="#93c5fd">消息量 · @关系</text>
+  <text x="100" y="260" text-anchor="middle" font-size="9.5" fill="#93c5fd">关键词 · 活跃度</text>
+
+  <!-- Minutes -->
+  <g filter="url(#s)">
+    <rect x="205" y="178" width="140" height="90" rx="10" fill="url(#grad-agent)"/>
+  </g>
+  <text x="275" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Min-Collector</text>
+  <text x="275" y="220" text-anchor="middle" font-size="10.5" fill="#bfdbfe">妙记采集</text>
+  <line x1="225" y1="230" x2="325" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="275" y="246" text-anchor="middle" font-size="9.5" fill="#93c5fd">决策 · Action Items</text>
+  <text x="275" y="260" text-anchor="middle" font-size="9.5" fill="#93c5fd">未决议题 · 重复话题</text>
+
+  <!-- Task -->
+  <g filter="url(#s)">
+    <rect x="380" y="178" width="140" height="90" rx="10" fill="url(#grad-agent)"/>
+  </g>
+  <text x="450" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Task-Collector</text>
+  <text x="450" y="220" text-anchor="middle" font-size="10.5" fill="#bfdbfe">任务采集</text>
+  <line x1="400" y1="230" x2="500" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="450" y="246" text-anchor="middle" font-size="9.5" fill="#93c5fd">完成率 · 逾期率</text>
+  <text x="450" y="260" text-anchor="middle" font-size="9.5" fill="#93c5fd">任务周期 · 趋势</text>
+
+  <!-- Doc -->
+  <g filter="url(#s)">
+    <rect x="555" y="178" width="140" height="90" rx="10" fill="url(#grad-agent)"/>
+  </g>
+  <text x="625" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Doc-Collector</text>
+  <text x="625" y="220" text-anchor="middle" font-size="10.5" fill="#bfdbfe">文档采集</text>
+  <line x1="575" y1="230" x2="675" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="625" y="246" text-anchor="middle" font-size="9.5" fill="#93c5fd">创建趋势 · 协作密度</text>
+  <text x="625" y="260" text-anchor="middle" font-size="9.5" fill="#93c5fd">活跃 vs 静止文档</text>
+
+  <!-- Calendar -->
+  <g filter="url(#s)">
+    <rect x="730" y="178" width="140" height="90" rx="10" fill="url(#grad-agent)"/>
+  </g>
+  <text x="800" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Cal-Collector</text>
+  <text x="800" y="220" text-anchor="middle" font-size="10.5" fill="#bfdbfe">日历采集</text>
+  <line x1="750" y1="230" x2="850" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="800" y="246" text-anchor="middle" font-size="9.5" fill="#93c5fd">会议频率 · 时长趋势</text>
+  <text x="800" y="260" text-anchor="middle" font-size="9.5" fill="#93c5fd">取消率 · 参与者</text>
+
+  <!-- Converge lines from 5 agents -->
+  <line x1="100" y1="268" x2="100" y2="310" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="275" y1="268" x2="275" y2="310" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="450" y1="268" x2="450" y2="310" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="625" y1="268" x2="625" y2="310" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="800" y1="268" x2="800" y2="310" stroke="#94a3b8" stroke-width="1"/>
+  <!-- Horizontal merge line -->
+  <line x1="100" y1="310" x2="800" y2="310" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="450" y1="310" x2="450" y2="340" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Phase 2 label -->
+  <rect x="30" y="348" width="100" height="24" rx="12" fill="#cffafe"/>
+  <text x="80" y="364" text-anchor="middle" font-size="11" font-weight="700" fill="#0e7490">Phase 2</text>
+  <text x="140" y="364" font-size="11.5" fill="#64748b">指标引擎</text>
+
+  <!-- ============ Metrics Engine ============ -->
+  <g filter="url(#s)">
+    <rect x="150" y="342" width="600" height="65" rx="10" fill="url(#grad-metric)"/>
+  </g>
+  <text x="450" y="366" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">四维指标引擎</text>
+  <!-- 4 metrics -->
+  <rect x="175" y="378" width="120" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="235" y="393" text-anchor="middle" font-size="11" fill="#fff">沟通健康度</text>
+  <rect x="310" y="378" width="120" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="370" y="393" text-anchor="middle" font-size="11" fill="#fff">执行效率</text>
+  <rect x="445" y="378" width="120" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="505" y="393" text-anchor="middle" font-size="11" fill="#fff">会议效能</text>
+  <rect x="580" y="378" width="120" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="640" y="393" text-anchor="middle" font-size="11" fill="#fff">知识沉淀</text>
+
+  <!-- Arrow to Pattern Detection -->
+  <line x1="450" y1="407" x2="450" y2="440" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Phase 3 label -->
+  <rect x="30" y="450" width="100" height="24" rx="12" fill="#fef3c7"/>
+  <text x="80" y="466" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">Phase 3</text>
+  <text x="140" y="466" font-size="11.5" fill="#64748b">模式检测</text>
+  <rect x="198" y="448" width="50" height="18" rx="9" fill="#fbbf24"/>
+  <text x="223" y="460" text-anchor="middle" font-size="9" font-weight="700" fill="#78350f">CORE</text>
+
+  <!-- ============ Pattern Detection ============ -->
+  <g filter="url(#s)">
+    <rect x="150" y="443" width="600" height="105" rx="10" fill="url(#grad-pattern)"/>
+    <rect x="150" y="443" width="600" height="105" rx="10" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6,3"/>
+  </g>
+  <text x="450" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">跨源模式检测 × 双源交叉验证</text>
+  <!-- 7 patterns in 2 rows -->
+  <rect x="170" y="480" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="224" y="495" text-anchor="middle" font-size="10" fill="#fff">P1 决策漂移</text>
+  <rect x="290" y="480" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="344" y="495" text-anchor="middle" font-size="10" fill="#fff">P2 沉默瓶颈</text>
+  <rect x="410" y="480" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="464" y="495" text-anchor="middle" font-size="10" fill="#fff">P3 知识蒸发</text>
+  <rect x="530" y="480" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="584" y="495" text-anchor="middle" font-size="10" fill="#fff">P4 危机前静默</text>
+  <rect x="170" y="510" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="224" y="525" text-anchor="middle" font-size="10" fill="#fff">P5 会议通胀</text>
+  <rect x="290" y="510" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="344" y="525" text-anchor="middle" font-size="10" fill="#fff">P6 承诺衰减</text>
+  <rect x="410" y="510" width="108" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+  <text x="464" y="525" text-anchor="middle" font-size="10" fill="#fff">P7 信息孤岛</text>
+
+  <!-- Arrow to Output -->
+  <line x1="450" y1="548" x2="450" y2="578" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Phase 4 label -->
+  <rect x="30" y="590" width="100" height="24" rx="12" fill="#d1fae5"/>
+  <text x="80" y="606" text-anchor="middle" font-size="11" font-weight="700" fill="#065f46">Phase 4</text>
+  <text x="140" y="606" font-size="11.5" fill="#64748b">报告生成</text>
+
+  <!-- ============ Output ============ -->
+  <g filter="url(#s)">
+    <rect x="180" y="583" width="180" height="55" rx="10" fill="url(#grad-output)"/>
+  </g>
+  <text x="270" y="607" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">飞书文档</text>
+  <text x="270" y="625" text-anchor="middle" font-size="10" fill="#a7f3d0">金字塔结构报告</text>
+
+  <g filter="url(#s)">
+    <rect x="380" y="583" width="180" height="55" rx="10" fill="url(#grad-output)"/>
+  </g>
+  <text x="470" y="607" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">飞书白板</text>
+  <text x="470" y="625" text-anchor="middle" font-size="10" fill="#a7f3d0">项目时间线可视化</text>
+
+  <g filter="url(#s)">
+    <rect x="580" y="583" width="180" height="55" rx="10" fill="url(#grad-output)"/>
+  </g>
+  <text x="670" y="607" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">飞书多维表</text>
+  <text x="670" y="625" text-anchor="middle" font-size="10" fill="#a7f3d0">指标数据存储</text>
+
+  <!-- Feishu CLI badge -->
+  <rect x="30" y="660" width="840" height="28" rx="6" fill="#f1f5f9"/>
+  <text x="450" y="679" text-anchor="middle" font-size="11" fill="#64748b">Powered by  飞书 CLI（lark-im · lark-minutes · lark-task · lark-doc · lark-wiki · lark-calendar · lark-whiteboard · lark-base）</text>
+</svg>
